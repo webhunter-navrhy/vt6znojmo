@@ -1,0 +1,85 @@
+{
+ "label": "Ubytování",
+ "h2_1": "Vyberte si,",
+ "h2_2": "kde se vyspíte",
+ "trevlix": "https://book.trevlix.com/book/app/?mode=window&cid=",
+ "adresy": [
+  {
+   "id": "zamecnicka",
+   "nazev": "Ubytování VT6",
+   "ulice": "Zámečnická 322/6",
+   "mesto": "669 02 Znojmo – centrum",
+   "claim": "Přímo v historickém centru, nad restaurací",
+   "cid": "6229926",
+   "popis": "Sedm pokojů v domě, kde je dole naše restaurace. Ráno snídaně, večer večeře o patro níž a celé historické Znojmo na dosah ruky. Zastávka MHD na náměstí Komenského je 200 metrů od dveří.",
+   "body": [
+    "7 pokojů: 2 dvoulůžkové, 3 třílůžkové, 2 čtyřlůžkové",
+    "Každý pokoj s vlastní koupelnou: sprchový kout, toaleta, umyvadlo",
+    "Snídaně, Wi-Fi, TV, lednice, fén",
+    "Některé pokoje s klimatizací",
+    "Terasa"
+   ],
+   "foto": "hero-zamecnicka-m.jpg",
+   "foto2": "terasa.jpg",
+   "mapa": "https://mapy.cz/s/papefapaca",
+   "pokoje": [
+    {
+     "nazev": "Dvoulůžkový pokoj",
+     "m2": "15–17",
+     "osob": "2",
+     "foto": "z-dvoululko.jpg",
+     "pozn": "jeden s klimatizací"
+    },
+    {
+     "nazev": "Třílůžkový pokoj",
+     "m2": "18–19",
+     "osob": "2–3",
+     "foto": "z-trilulko.jpg",
+     "pozn": "některé v podkroví"
+    },
+    {
+     "nazev": "Čtyřlůžkový pokoj",
+     "m2": "22",
+     "osob": "2–4",
+     "foto": "z-ctyrlulko.jpg",
+     "pozn": "pro rodiny a partu"
+    }
+   ]
+  },
+  {
+   "id": "hakenova",
+   "nazev": "Penzion Znojmo",
+   "ulice": "Hakenova 688/29",
+   "mesto": "669 02 Znojmo",
+   "claim": "Kousek od centra, parkování bez starostí",
+   "cid": "9954544",
+   "popis": "Osm pokojů v klidné ulici blízko historického centra. Auto zaparkujete u domu, naproti přes ulici je supermarket Albert a zastávka MHD je sto metrů od penzionu.",
+   "body": [
+    "8 pokojů: 2 dvoulůžkové, 6 třílůžkových",
+    "Každý pokoj s vlastní koupelnou: sprchový kout, toaleta, umyvadlo",
+    "Wi-Fi, TV, lednice, fén",
+    "Bezproblémové parkování",
+    "Supermarket Albert naproti"
+   ],
+   "foto": "hakenova.jpg",
+   "foto2": "h-trilulko-2.jpg",
+   "mapa": "https://mapy.cz/s/derususoka",
+   "pokoje": [
+    {
+     "nazev": "Dvoulůžkový pokoj",
+     "m2": "14",
+     "osob": "2",
+     "foto": "h-dvoululko.jpg",
+     "pozn": "pro pár na víkend"
+    },
+    {
+     "nazev": "Třílůžkový pokoj",
+     "m2": "19",
+     "osob": "2–3",
+     "foto": "h-trilulko.jpg",
+     "pozn": "nejčastější volba"
+    }
+   ]
+  }
+ ]
+}

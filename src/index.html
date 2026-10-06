@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{ site.nazev }} · {{ site.claim }}</title>
+<meta name="description" content="{{ site.meta_popis }}">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#15100D">
+<meta property="og:title" content="{{ site.nazev }} · Znojmo">
+<meta property="og:description" content="{{ site.meta_popis }}">
+<meta property="og:image" content="{{ 'hero-zamecnicka.jpg'|img }}">
+<link rel="icon" href="assets/favicon.png?v={{ v.fav }}">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600&family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;1,9..144,300;1,9..144,400&display=swap" rel="stylesheet">
+<link rel="preload" as="image" href="{{ 'hero-zamecnicka.jpg'|img }}" media="(min-width: 768px)">
+<link rel="stylesheet" href="assets/style.css?v={{ v.css }}">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Restaurant","name":"VT6 – asijská restaurace a ubytování","servesCuisine":"Vietnamese","address":{"@type":"PostalAddress","streetAddress":"Zámečnická 322/6","addressLocality":"Znojmo","postalCode":"669 02","addressCountry":"CZ"},"telephone":"{{ site.tel_restaurace|tel }}","email":"{{ site.email }}","openingHoursSpecification":[{% for h in site.hodiny %}{% for d in h.d %}{"@type":"OpeningHoursSpecification","dayOfWeek":"{{ ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'][d] }}","opens":"{{ h.od }}","closes":"{{ h.do }}"}{% if not loop.last %},{% endif %}{% endfor %}{% if not loop.last %},{% endif %}{% endfor %}]}
+</script>
+</head>
+<body>
+<a class="skip" href="#listek">Přeskočit na jídelní lístek</a>
+
+<header class="nav" id="nav">
+  <div class="nav__in">
+    <a href="#top" class="nav__logo" aria-label="VT6 House & Restaurant – úvod">
+      <img src="assets/logo.svg?v={{ v.logo }}" alt="VT6" class="nav__mark" width="70" height="32">
+      <span class="nav__word">House &amp; Restaurant</span>
+    </a>
+    <nav class="nav__menu" id="menu" aria-label="Hlavní navigace">
+      <a href="#restaurace">Restaurace</a>
+      <a href="#listek">Lístek</a>
+      <a href="#poledne">Polední menu</a>
+      <a href="#ubytovani">Ubytování</a>
+      <a href="#kontakt">Kontakt</a>
+      <a href="#ubytovani" class="btn btn--red nav__cta">Rezervovat pokoj</a>
+    </nav>
+    <button class="nav__toggle" id="toggle" aria-label="Otevřít menu" aria-expanded="false" aria-controls="menu"><span></span><span></span></button>
+  </div>
+</header>
+
+<main id="top">
+
+<!-- HERO -->
+<section class="hero" aria-label="Úvod">
+  <picture class="hero__bg">
+    <source media="(max-width: 767px)" srcset="{{ 'hero-zamecnicka-m.jpg'|img(900) }}">
+    <img src="{{ 'hero-zamecnicka.jpg'|img }}" alt="Fasáda restaurace Việt Tâm v Zámečnické ulici ve Znojmě" fetchpriority="high">
+  </picture>
+  <div class="hero__in">
+    <p class="eyebrow eyebrow--light hero__fade">{{ site.hero.label }}</p>
+    <h1 class="hero__h1" data-split>
+      <span class="ln">{{ site.hero.h1_1 }}</span>
+      <span class="ln"><em>{{ site.hero.h1_2 }}</em></span>
+      <span class="ln">{{ site.hero.h1_3 }}</span>
+    </h1>
+    <div class="hero__row hero__fade">
+      <p class="hero__sub">{{ site.hero.sub }}</p>
+      <div class="hero__btns">
+        <a href="#listek" class="btn btn--red">Prohlédnout lístek</a>
+        <a href="#ubytovani" class="btn btn--ghost">Volné pokoje</a>
+      </div>
+    </div>
+  </div>
+  <p class="hero__status hero__fade" data-status aria-live="polite"><span class="dot"></span><span data-status-text>Restaurace · Zámečnická 322/6</span></p>
+  <p class="hero__vert" aria-hidden="true">Việt Tâm · Znojmo</p>
+  <a href="#restaurace" class="hero__scroll" aria-label="Posunout dolů"><span>Dolů</span><i></i></a>
+</section>
+
+<div class="marquee" aria-hidden="true">
+  <div class="marquee__track">
+    {% for _ in range(2) %}<span>{% for w in site.marquee %}{{ w }}<b>·</b>{% endfor %}</span>{% endfor %}
+  </div>
+</div>
+
+<!-- PŘÍBĚH -->
+<section class="story" id="restaurace">
+  <div class="wrap story__grid">
+    <div class="story__media">
+      <figure class="story__big clip"><img src="{{ 'restaurace-2.jpg'|img }}" srcset="{{ 'restaurace-2.jpg'|srcset }}" sizes="(max-width: 767px) 92vw, 46vw" alt="Interiér restaurace VT6 s klenutými oblouky" loading="lazy"></figure>
+      <figure class="story__small clip"><img src="{{ 'terasa.jpg'|img }}" alt="Terasa s dřevěnými stoly a výhledem na střechy Znojma" loading="lazy"></figure>
+    </div>
+    <div class="story__text">
+      <p class="eyebrow reveal">{{ site.pribeh.label }}</p>
+      <h2 class="h2 reveal"><span class="thin">{{ site.pribeh.h2_1 }}</span> <em>{{ site.pribeh.h2_2 }}</em></h2>
+      {% for p in site.pribeh.text %}<p class="lead reveal">{{ p }}</p>{% endfor %}
+      <blockquote class="story__quote reveal">„{{ site.pribeh.citat }}“</blockquote>
+      <ul class="story__facts reveal">
+        <li><strong>11–15</strong><span>polední menu každý den</span></li>
+        <li><strong>Wolt</strong><span>i Foodora vozí až k Vám</span></li>
+        <li><strong>Stravenky</strong><span>Pluxee, Up, Edenred i karty</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- LÍSTEK -->
+<section class="menu" id="listek">
+  <div class="wrap">
+    <div class="menu__head">
+      <div>
+        <p class="eyebrow eyebrow--red reveal">Jídelní lístek</p>
+        <h2 class="h2 reveal"><span class="thin">Od phở</span> <em>po křupavou kachnu</em></h2>
+      </div>
+      <p class="menu__note reveal"><span class="hover-only">Najeďte na jídlo a ukážeme Vám ho na talíři. </span>{{ menu.pozn }}</p>
+    </div>
+
+    <div class="tabs reveal" role="tablist" aria-label="Kategorie lístku">
+      {% for g in menu.skupiny %}<button role="tab" class="tab{% if loop.first %} is-on{% endif %}" id="t-{{ g.id }}" aria-controls="p-{{ g.id }}" aria-selected="{{ 'true' if loop.first else 'false' }}" data-tab="{{ g.id }}">{{ g.nazev }}</button>{% endfor %}
+    </div>
+
+    <div class="menu__grid">
+      <div class="plate" aria-hidden="true">
+        <div class="plate__frame">
+          {% for g in menu.skupiny %}{% for s in g.sekce %}{% for i in s.polozky if i.foto %}<img src="{{ i.foto|img(900) }}" alt="" data-plate="{{ i.cislo }}" loading="lazy"{% if i.cislo == '14' %} class="is-on"{% endif %}>{% endfor %}{% endfor %}{% endfor %}
+          <p class="plate__cap" data-plate-cap>Phở Việt Tâm</p>
+        </div>
+        <p class="plate__hint">Vlastní fotky z naší kuchyně</p>
+      </div>
+
+      <div class="menu__lists">
+        {% for g in menu.skupiny %}
+        <div class="panel{% if loop.first %} is-on{% endif %}" role="tabpanel" id="p-{{ g.id }}" aria-labelledby="t-{{ g.id }}"{% if not loop.first %} hidden{% endif %}>
+          {% for s in g.sekce %}
+          <div class="msec">
+            <h3 class="msec__h">{{ s.nazev }}{% if s.pozn %} <small>{{ s.pozn }}</small>{% endif %}</h3>
+            <ul class="dishes">
+              {% for i in s.polozky %}
+              <li class="dish{% if i.foto %} has-foto{% endif %}{% if i.tip %} is-tip{% endif %}"{% if i.foto %} data-dish="{{ i.cislo }}" tabindex="0"{% endif %} data-cap="{{ i.viet or i.nazev }}">
+                <span class="dish__no">{{ i.cislo }}</span>
+                <span class="dish__body">
+                  {% if i.viet %}<span class="dish__viet">{{ i.viet }}</span>{% endif %}
+                  <span class="dish__name">{{ i.nazev }}{% if i.tip %} <span class="tip">doporučujeme</span>{% endif %}</span>
+                  {% if i.alergeny %}<span class="dish__al" title="Alergeny">{{ i.alergeny|join(', ') }}</span>{% endif %}
+                </span>
+                <span class="dish__line" aria-hidden="true"></span>
+                <span class="dish__price">{{ i.cena }} Kč</span>
+                {% if i.foto %}<img class="dish__thumb" src="{{ i.foto|img(900) }}" alt="" loading="lazy">{% endif %}
+              </li>
+              {% endfor %}
+            </ul>
+          </div>
+          {% endfor %}
+        </div>
+        {% endfor %}
+
+        <details class="allergens">
+          <summary>Seznam alergenů</summary>
+          <ol>{% for a in menu.alergeny %}<li>{{ a }}</li>{% endfor %}</ol>
+        </details>
+      </div>
+    </div>
+
+    <div class="drinks">
+      <h3 class="drinks__h reveal"><span class="thin">K tomu</span> <em>něco k pití</em></h3>
+      <div class="drinks__grid reveal-group">
+        {% for d in menu.napoje %}
+        <div class="drink reveal-item{% if d.foto %} drink--foto{% endif %}">
+          {% if d.foto %}<img src="{{ d.foto|img(900) }}" alt="{{ d.nazev }}" loading="lazy">{% endif %}
+          <div><h4>{{ d.nazev }}</h4><p>{{ d.popis }}</p></div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- POLEDNÍ MENU -->
+<section class="noon" id="poledne">
+  <div class="wrap noon__grid">
+    <div class="noon__text">
+      <p class="eyebrow reveal">Polední menu · {{ site.poledni_menu }}</p>
+      <h2 class="h2 reveal"><span class="thin">Oběd, na který</span> <em>se těšíte od rána</em></h2>
+      <p class="lead reveal">{{ denni_menu.pozn }}</p>
+      <div class="noon__btns reveal">
+        <a href="tel:{{ site.tel_restaurace|tel }}" class="btn btn--ink">Objednat na vyzvednutí</a>
+        {% for r in site.rozvoz %}<a href="{{ r.url }}" class="btn btn--line" target="_blank" rel="noopener">{{ r.nazev }}</a>{% endfor %}
+      </div>
+      <p class="noon__pay reveal">{{ site.platby }}</p>
+    </div>
+    <article class="ticket reveal" aria-label="Polední menu">
+      <header class="ticket__head">
+        <img src="assets/logo.svg?v={{ v.logo }}" alt="" width="64" height="30">
+        <div><span>Dnes vaříme</span><strong>{{ denni_menu.datum }}</strong></div>
+      </header>
+      <h3>Polévka</h3>
+      {% for i in denni_menu.polevky %}<p class="row"><span>{{ i.nazev }}</span><i></i><b>{{ i.cena }} Kč</b></p>{% endfor %}
+      <h3>Předkrm</h3>
+      {% for i in denni_menu.predkrm %}<p class="row"><span>{{ i.nazev }}</span><i></i><b>{{ i.cena }} Kč</b></p>{% endfor %}
+      <h3>Hlavní jídla</h3>
+      {% for i in denni_menu.jidla %}<p class="row"><span><em>{{ loop.index }}.</em> {{ i.nazev }}</span><i></i><b>{{ i.cena }} Kč</b></p>{% endfor %}
+      <p class="ticket__foot">{{ denni_menu.napoj }}</p>
+    </article>
+  </div>
+</section>
+
+<!-- OBRAZ + ČÍSLA -->
+<section class="break" aria-label="VT6 v číslech">
+  <div class="break__img"><img src="{{ 'restaurace-lampy.jpg'|img }}" srcset="{{ 'restaurace-lampy.jpg'|srcset }}" sizes="100vw" alt="Restaurace VT6 se závěsnými lampami a zelenými rostlinami" loading="lazy"></div>
+  <div class="wrap break__stats reveal-group">
+    {% for c in site.cisla %}
+    <div class="stat reveal-item"><span class="stat__n"><span data-count="{{ c.n }}">{{ c.n }}</span>{{ c.s }}</span><span class="stat__t">{{ c.t }}</span></div>
+    {% endfor %}
+  </div>
+</section>
+
+<!-- UBYTOVÁNÍ -->
+<section class="stay" id="ubytovani">
+  <div class="wrap">
+    <div class="stay__head">
+      <div>
+        <p class="eyebrow reveal">{{ ubytovani.label }}</p>
+        <h2 class="h2 reveal"><span class="thin">{{ ubytovani.h2_1 }}</span> <em>{{ ubytovani.h2_2 }}</em></h2>
+      </div>
+      <div class="switch reveal" role="tablist" aria-label="Adresa ubytování">
+        {% for a in ubytovani.adresy %}<button role="tab" class="switch__b{% if loop.first %} is-on{% endif %}" data-stay="{{ a.id }}" aria-selected="{{ 'true' if loop.first else 'false' }}" aria-controls="s-{{ a.id }}"><small>{{ a.nazev }}</small>{{ a.ulice }}</button>{% endfor %}
+        <span class="switch__pill" aria-hidden="true"></span>
+      </div>
+    </div>
+
+    {% for a in ubytovani.adresy %}
+    <div class="place{% if loop.first %} is-on{% endif %}" id="s-{{ a.id }}" role="tabpanel"{% if not loop.first %} hidden{% endif %}>
+      <div class="place__grid">
+        <div class="place__media">
+          <figure class="place__main"><img src="{{ a.foto|img }}" srcset="{{ a.foto|srcset }}" sizes="(max-width: 767px) 92vw, 55vw" alt="{{ a.nazev }}, {{ a.ulice }}" loading="lazy"></figure>
+          <figure class="place__sub"><img src="{{ a.foto2|img(900) }}" alt="" loading="lazy"></figure>
+          {% if a.id == 'hakenova' %}<img class="place__crest" src="assets/znak-znojmo.png" alt="Penzion Znojmo" width="110" height="155" loading="lazy">{% endif %}
+        </div>
+        <div class="place__text">
+          <p class="place__claim">{{ a.claim }}</p>
+          <h3 class="place__h">{{ a.nazev }}</h3>
+          <p class="place__addr">{{ a.ulice }}, {{ a.mesto }} · <a href="{{ a.mapa }}" target="_blank" rel="noopener" class="ul">mapa</a></p>
+          <p class="lead">{{ a.popis }}</p>
+          <ul class="ticks">{% for b in a.body %}<li>{{ b }}</li>{% endfor %}</ul>
+          <a href="{{ ubytovani.trevlix }}{{ a.cid }}" class="btn btn--red" target="_blank" rel="noopener">Volné termíny a rezervace</a>
+        </div>
+      </div>
+      <div class="rooms">
+        {% for r in a.pokoje %}
+        <a class="room" href="{{ ubytovani.trevlix }}{{ a.cid }}" target="_blank" rel="noopener">
+          <span class="room__img"><img src="{{ r.foto|img(900) }}" alt="{{ r.nazev }} – {{ a.ulice }}" loading="lazy"></span>
+          <span class="room__meta"><span>{{ r.m2 }} m²</span><span>{{ r.osob }} osoby</span></span>
+          <span class="room__name">{{ r.nazev }}</span>
+          <span class="room__note">{{ r.pozn }}</span>
+          <span class="room__go">Ověřit termín →</span>
+        </a>
+        {% endfor %}
+      </div>
+    </div>
+    {% endfor %}
+    <p class="stay__note">Rezervujete přímo v systému Trevlix, takže obsazenost i ceny jsou vždy aktuální.</p>
+  </div>
+</section>
+
+<!-- OKOLÍ -->
+<section class="around">
+  <div class="wrap around__grid">
+    <div class="around__head">
+      <p class="eyebrow reveal">{{ okoli.label }}</p>
+      <h2 class="h2 reveal"><span class="thin">{{ okoli.h2_1 }}</span> <em>{{ okoli.h2_2 }}</em></h2>
+      <p class="lead reveal">{{ okoli.text }}</p>
+    </div>
+    <ol class="sights reveal-group">
+      {% for m in okoli.mista %}<li class="sight reveal-item"><span class="sight__n">{{ '%02d'|format(loop.index) }}</span><h3>{{ m.nazev }}</h3><p>{{ m.popis }}</p></li>{% endfor %}
+    </ol>
+  </div>
+</section>
+
+<!-- KONTAKT -->
+<section class="contact" id="kontakt">
+  <div class="wrap">
+    <p class="eyebrow reveal">Kontakt</p>
+    <h2 class="h2 contact__h reveal"><span class="thin">Těšíme se</span> <em>na Vás</em></h2>
+    <div class="contact__grid">
+      <div class="cbox reveal">
+        <h3>Restaurace a ubytování VT6</h3>
+        <p>Zámečnická 322/6<br>669 02 Znojmo – centrum</p>
+        <p><a class="ul" href="tel:{{ site.tel_restaurace|tel }}">{{ site.tel_restaurace }}</a><br><a class="ul" href="mailto:{{ site.email }}">{{ site.email }}</a></p>
+        <table class="hours" aria-label="Otevírací doba restaurace">
+          {% for hh in site.hodiny %}<tr data-days="{{ hh.d|join(',') }}"><th>{{ hh.dny }}</th><td>{{ hh.od }} – {{ hh.do }}</td></tr>{% endfor %}
+        </table>
+        <p class="cbox__live" data-status><span class="dot"></span><span data-status-text></span></p>
+      </div>
+      <div class="cbox reveal">
+        <h3>Penzion Znojmo</h3>
+        <p>Hakenova 688/29<br>669 02 Znojmo</p>
+        <p><a class="ul" href="tel:{{ site.tel_ubytovani|tel }}">{{ site.tel_ubytovani }}</a><br><a class="ul" href="tel:{{ site.tel_ubytovani_2|tel }}">{{ site.tel_ubytovani_2 }}</a><br><a class="ul" href="mailto:{{ site.email }}">{{ site.email }}</a></p>
+        <p class="muted">Volné pokoje a ceny najdete v <a class="ul" href="#ubytovani">online rezervaci</a>.</p>
+      </div>
+      <div class="map reveal">
+        <iframe title="Mapa – Zámečnická 322/6, Znojmo" src="https://maps.google.com/maps?q=Z%C3%A1me%C4%8Dnick%C3%A1%20322%2F6%2C%20Znojmo&z=16&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="foot">
+  <div class="wrap foot__in">
+    <img src="assets/logo-light.svg?v={{ v.logol }}" alt="VT6" class="foot__logo" width="120" height="56">
+    <p class="foot__claim">{{ site.claim }}</p>
+    <nav class="foot__links" aria-label="Sociální sítě">
+      <a href="{{ site.instagram }}" target="_blank" rel="noopener" class="ul">Instagram</a>
+      <a href="{{ site.facebook_restaurace }}" target="_blank" rel="noopener" class="ul">Facebook restaurace</a>
+      <a href="{{ site.facebook_penzion }}" target="_blank" rel="noopener" class="ul">Facebook penzionu</a>
+    </nav>
+    <p class="foot__legal">© {{ year }} VT6 House &amp; Restaurant · Penzion Znojmo · IČO {{ site.ico }}</p>
+  </div>
+</footer>
+
+<div class="mbar" aria-label="Rychlé akce">
+  <a href="tel:{{ site.tel_restaurace|tel }}">Zavolat</a>
+  <a href="#listek">Lístek</a>
+  <a href="#ubytovani" class="mbar__red">Rezervovat</a>
+</div>
+
+<script src="assets/main.js?v={{ v.js }}" defer></script>
+</body>
+</html>

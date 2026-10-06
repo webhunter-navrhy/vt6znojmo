@@ -1,0 +1,69 @@
+{
+ "datum": "úterý 6. 10.",
+ "pozn": "Polední menu podáváme 11:00–15:00. Rozvážíme ho i přes Wolt, na vyzvednutí si ho objednáte telefonicky.",
+ "polevky": [
+  {
+   "nazev": "Pikantní kuřecí polévka s kokosovým mlékem",
+   "cena": 55
+  }
+ ],
+ "predkrm": [
+  {
+   "nazev": "Smažené závitky s vepřovým masem – 2 ks",
+   "cena": 69,
+   "alergeny": [
+    2,
+    3
+   ]
+  }
+ ],
+ "jidla": [
+  {
+   "nazev": "Udon nudle se zeleninou a tofu",
+   "cena": 139,
+   "alergeny": [
+    1,
+    3,
+    5,
+    6
+   ]
+  },
+  {
+   "nazev": "Kuřecí maso se sójovou omáčkou, zeleninou a rýží",
+   "cena": 159,
+   "alergeny": [
+    9,
+    11
+   ]
+  },
+  {
+   "nazev": "Restovaná rýže se zeleninou a kuřecím masem",
+   "cena": 159,
+   "alergeny": [
+    3,
+    5,
+    6,
+    14
+   ]
+  },
+  {
+   "nazev": "Udon nudle se zeleninou a kuřecím masem",
+   "cena": 149,
+   "alergeny": [
+    1,
+    3,
+    5
+   ]
+  },
+  {
+   "nazev": "Restované nudle se zeleninou a kuřecím masem",
+   "cena": 139,
+   "alergeny": [
+    1,
+    3,
+    5
+   ]
+  }
+ ],
+ "napoj": "Točená bezinková limonáda k menu 0,3 l za 20 Kč, 0,5 l za 30 Kč"
+}

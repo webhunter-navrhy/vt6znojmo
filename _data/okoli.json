@@ -1,0 +1,28 @@
+{
+ "label": "Okolí",
+ "h2_1": "Znojmo",
+ "h2_2": "za rohem",
+ "text": "Z obou adres to máte pěšky nebo pár minut autem k tomu nejlepšímu, co Znojmo a Podyjí nabízí.",
+ "mista": [
+  {
+   "nazev": "Znojemské podzemí",
+   "popis": "Kilometry chodeb pod historickým centrem, prohlídky i adrenalinová trasa."
+  },
+  {
+   "nazev": "Rotunda sv. Kateřiny a Znojemský hrad",
+   "popis": "Románské fresky a vyhlídka do údolí Dyje."
+  },
+  {
+   "nazev": "Radniční věž",
+   "popis": "Gotická dominanta města s výhledem na střechy a vinice."
+  },
+  {
+   "nazev": "Národní park Podyjí",
+   "popis": "Kaňon Dyje, Vranovská pláž a cyklostezky podél řeky."
+  },
+  {
+   "nazev": "Vinné sklepy a vinařství",
+   "popis": "Znojemská vinařská podoblast, ochutnávky a vinobraní."
+  }
+ ]
+}

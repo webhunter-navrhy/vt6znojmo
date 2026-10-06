@@ -1,0 +1,106 @@
+{
+ "nazev": "VT6 House & Restaurant",
+ "claim": "Asijská restaurace a ubytování v centru Znojma",
+ "ico": "01293451",
+ "email": "info@penzion-znojmo.cz",
+ "tel_restaurace": "+420 775 319 137",
+ "tel_ubytovani": "+420 731 488 068",
+ "tel_ubytovani_2": "+420 774 721 288",
+ "hodiny": [
+  {
+   "dny": "Pondělí – čtvrtek",
+   "od": "11:00",
+   "do": "20:00",
+   "d": [
+    1,
+    2,
+    3,
+    4
+   ]
+  },
+  {
+   "dny": "Pátek – sobota",
+   "od": "11:00",
+   "do": "21:00",
+   "d": [
+    5,
+    6
+   ]
+  },
+  {
+   "dny": "Neděle",
+   "od": "11:00",
+   "do": "18:00",
+   "d": [
+    0
+   ]
+  }
+ ],
+ "poledni_menu": "11:00 – 15:00",
+ "platby": "Platební karty Visa a Mastercard, stravenky Pluxee, Up, Edenred a Naše stravenka.",
+ "rozvoz": [
+  {
+   "nazev": "Wolt",
+   "url": "https://wolt.com/cs/cze/znojmo"
+  },
+  {
+   "nazev": "Foodora",
+   "url": "https://www.foodora.cz/city/znojmo"
+  }
+ ],
+ "facebook_restaurace": "https://www.facebook.com/people/VT6-Restaurace/100083246291681/",
+ "facebook_penzion": "https://www.facebook.com/PenzionZnojmo",
+ "instagram": "https://www.instagram.com/vt6_restaurace",
+ "meta_popis": "Vietnamská restaurace VT6 v Zámečnické ulici a 15 pokojů na dvou adresách ve Znojmě. Phở, bún chả, křupavá kachna, polední menu a online rezervace pokojů.",
+ "hero": {
+  "label": "Restaurace & ubytování · Znojmo",
+  "h1_1": "Vietnamská kuchyně",
+  "h1_2": "a klidný spánek",
+  "h1_3": "v srdci Znojma",
+  "sub": "Restaurace VT6 v historické Zámečnické ulici a 15 pokojů na dvou adresách. Přijďte na phở a zůstaňte přes noc."
+ },
+ "marquee": [
+  "Phở bò",
+  "Bún chả",
+  "Křupavá kachna",
+  "Polední menu 11–15",
+  "15 pokojů",
+  "Zámečnická 322/6",
+  "Hakenova 688/29",
+  "Terasa",
+  "Vietnamská káva",
+  "Vína Znovín"
+ ],
+ "pribeh": {
+  "label": "Kdo jsme",
+  "h2_1": "Jeden dům plný vůní,",
+  "h2_2": "dvě adresy na spaní",
+  "text": [
+   "Na fasádě v Zámečnické ulici stojí Việt Tâm. Dole vaříme vietnamskou kuchyni z vybraných surovin od nejlepších dodavatelů, nahoře jsou pokoje pro hosty, kteří chtějí mít Znojmo doslova za dveřmi.",
+   "Kdo přijede autem a chce parkovat bez starostí, může bydlet v našem Penzionu Znojmo v Hakenově ulici, asi kilometr od centra. Na phở to pak má jen kousek."
+  ],
+  "citat": "Přijďte na tradiční asijskou kuchyni, která potěší smysly a rozvibruje chuťové pohárky."
+ },
+ "cisla": [
+  {
+   "n": 15,
+   "s": "",
+   "t": "pokojů na dvou adresách"
+  },
+  {
+   "n": 59,
+   "s": "",
+   "t": "jídel a příloh na lístku"
+  },
+  {
+   "n": 200,
+   "s": " m",
+   "t": "k MHD na náměstí Komenského"
+  },
+  {
+   "n": 7,
+   "s": "",
+   "t": "dní v týdnu otevřeno"
+  }
+ ]
+}

@@ -1,0 +1,794 @@
+{
+ "nadpis": "Stálý lístek",
+ "pozn": "Ceny v Kč. Čísla u jídel jsou alergeny – seznam najdete pod lístkem.",
+ "skupiny": [
+  {
+   "id": "polevky",
+   "nazev": "Polévky & phở",
+   "sekce": [
+    {
+     "nazev": "Velké polévky phở",
+     "polozky": [
+      {
+       "cislo": "13a",
+       "nazev": "Polévka phở s rýžovými nudlemi a tofu",
+       "cena": 180,
+       "alergeny": [
+        6
+       ],
+       "viet": "Phở chay"
+      },
+      {
+       "cislo": "13b",
+       "nazev": "Polévka phở s rýžovými nudlemi a kuřecím masem",
+       "cena": 180,
+       "alergeny": [
+        6
+       ],
+       "viet": "Phở gà"
+      },
+      {
+       "cislo": "13c",
+       "nazev": "Polévka phở s rýžovými nudlemi a hovězím masem",
+       "cena": 190,
+       "alergeny": [
+        6
+       ],
+       "viet": "Phở bò",
+       "foto": "jidlo-pho-bo.jpg"
+      },
+      {
+       "cislo": "14",
+       "nazev": "Speciální phở VT6 s kuřecím a hovězím masem, krevetami a masovými koulemi",
+       "cena": 290,
+       "alergeny": [
+        2,
+        4,
+        6
+       ],
+       "viet": "Phở Việt Tâm",
+       "foto": "jidlo-pho-vt6.jpg",
+       "tip": true
+      }
+     ]
+    },
+    {
+     "nazev": "Malé polévky",
+     "polozky": [
+      {
+       "cislo": "1",
+       "nazev": "Kuřecí polévka se skleněnými nudlemi",
+       "cena": 60,
+       "alergeny": [
+        2,
+        4
+       ],
+       "foto": "jidlo-polevka-kureci.jpg"
+      },
+      {
+       "cislo": "2",
+       "nazev": "Pikantní kuřecí polévka s kokosovým mlékem",
+       "cena": 65,
+       "alergeny": [
+        2,
+        4,
+        7
+       ]
+      },
+      {
+       "cislo": "3",
+       "nazev": "Pikantní krevetová polévka s kokosovým mlékem",
+       "cena": 70,
+       "alergeny": [
+        2,
+        4,
+        7
+       ],
+       "foto": "jidlo-polevka-krevetova.jpg"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "predkrmy",
+   "nazev": "Předkrmy & saláty",
+   "sekce": [
+    {
+     "nazev": "Předkrmy",
+     "polozky": [
+      {
+       "cislo": "4",
+       "nazev": "Čerstvé jarní závitky s krevetami / hovězím / tofu",
+       "cena": 120,
+       "alergeny": [
+        5,
+        6
+       ],
+       "foto": "jidlo-zavitky-cerstve.jpg"
+      },
+      {
+       "cislo": "5",
+       "nazev": "Smažené závitky s vepřovým masem a krevetami",
+       "cena": 90,
+       "alergeny": [
+        2,
+        3
+       ],
+       "foto": "jidlo-zavitky-smazene.jpg"
+      },
+      {
+       "cislo": "6",
+       "nazev": "Křupavé smažené krevety",
+       "cena": 110,
+       "alergeny": [
+        1,
+        2,
+        3
+       ],
+       "foto": "jidlo-krevety-smazene.jpg"
+      }
+     ]
+    },
+    {
+     "nazev": "Saláty",
+     "polozky": [
+      {
+       "cislo": "7",
+       "nazev": "Kuřecí salát s mangem a kokosem",
+       "cena": 130,
+       "alergeny": [
+        5,
+        11
+       ]
+      },
+      {
+       "cislo": "8",
+       "nazev": "Salát s krevetami, mangem a kokosem",
+       "cena": 130,
+       "alergeny": [
+        2,
+        5,
+        11
+       ],
+       "foto": "jidlo-salat-krevety.jpg"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "nudle",
+   "nazev": "Nudle",
+   "sekce": [
+    {
+     "nazev": "Bún – kulaté rýžové nudle",
+     "polozky": [
+      {
+       "cislo": "9",
+       "nazev": "Grilované vepřové maso s kulatými rýžovými nudlemi a rybí omáčkou",
+       "cena": 180,
+       "alergeny": [
+        4,
+        11
+       ],
+       "viet": "Bún chả",
+       "foto": "jidlo-bun-cha.jpg",
+       "tip": true
+      },
+      {
+       "cislo": "10",
+       "nazev": "Kulaté rýžové nudle s hovězím masem na česneku a rybí omáčkou",
+       "cena": 190,
+       "alergeny": [
+        4,
+        5,
+        6,
+        11,
+        14
+       ],
+       "viet": "Bún bò Nam Bộ",
+       "foto": "jidlo-bun-bo-nam-bo.jpg"
+      },
+      {
+       "cislo": "11",
+       "nazev": "Smažené závitky s kulatými rýžovými nudlemi a rybí omáčkou",
+       "cena": 180,
+       "alergeny": [
+        2,
+        3
+       ],
+       "viet": "Bún nem rán",
+       "foto": "jidlo-bun-nem.jpg"
+      },
+      {
+       "cislo": "12",
+       "nazev": "Kulaté rýžové nudle s tofu a arašídovou omáčkou",
+       "cena": 180,
+       "alergeny": [
+        5,
+        6,
+        11,
+        14
+       ],
+       "foto": "jidlo-bun-tofu-arasidy.jpg"
+      }
+     ]
+    },
+    {
+     "nazev": "Udon nudle",
+     "polozky": [
+      {
+       "cislo": "15",
+       "nazev": "Restované udon nudle se zeleninou a tofu",
+       "cena": 170,
+       "alergeny": [
+        1,
+        3,
+        5,
+        6,
+        14
+       ]
+      },
+      {
+       "cislo": "16",
+       "nazev": "Restované udon nudle se zeleninou a kuřecím masem",
+       "cena": 170,
+       "alergeny": [
+        1,
+        3,
+        5,
+        6,
+        14
+       ]
+      },
+      {
+       "cislo": "17",
+       "nazev": "Restované udon nudle se zeleninou a hovězím masem",
+       "cena": 200,
+       "alergeny": [
+        1,
+        3,
+        5,
+        6,
+        14
+       ]
+      },
+      {
+       "cislo": "18",
+       "nazev": "Restované udon nudle se zeleninou a krevetami",
+       "cena": 200,
+       "alergeny": [
+        1,
+        2,
+        3,
+        5,
+        6,
+        14
+       ]
+      },
+      {
+       "cislo": "19",
+       "nazev": "Restované udon nudle s křupavou kachnou, zeleninou a hoisin omáčkou",
+       "cena": 330,
+       "alergeny": [
+        1,
+        2,
+        5,
+        6,
+        11,
+        14
+       ],
+       "foto": "jidlo-udon-kachna.jpg"
+      }
+     ]
+    },
+    {
+     "nazev": "Restované nudle",
+     "polozky": [
+      {
+       "cislo": "20",
+       "nazev": "Restované nudle se zeleninou a tofu",
+       "cena": 160,
+       "alergeny": [
+        1,
+        3,
+        5,
+        6,
+        14
+       ]
+      },
+      {
+       "cislo": "21",
+       "nazev": "Restované nudle se zeleninou a kuřecím masem",
+       "cena": 160,
+       "alergeny": [
+        1,
+        3,
+        5,
+        6,
+        14
+       ]
+      },
+      {
+       "cislo": "22",
+       "nazev": "Restované nudle se zeleninou a hovězím masem",
+       "cena": 190,
+       "alergeny": [
+        1,
+        3,
+        5,
+        6,
+        14
+       ],
+       "foto": "jidlo-nudle-hovezi.jpg"
+      },
+      {
+       "cislo": "23",
+       "nazev": "Restované nudle se zeleninou a krevetami",
+       "cena": 190,
+       "alergeny": [
+        1,
+        2,
+        3,
+        5,
+        6,
+        14
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ryze",
+   "nazev": "S rýží",
+   "sekce": [
+    {
+     "nazev": "Omáčka restaurace VT6",
+     "polozky": [
+      {
+       "cislo": "48",
+       "nazev": "Krevety s omáčkou restaurace VT6, zeleninou a rýží",
+       "cena": 280,
+       "alergeny": [],
+       "foto": "jidlo-krevety-vt6.jpg",
+       "tip": true
+      }
+     ],
+     "pozn": "lehce pikantní"
+    },
+    {
+     "nazev": "Domácí sójová omáčka",
+     "polozky": [
+      {
+       "cislo": "28",
+       "nazev": "Restované tofu se zeleninou a rýží",
+       "cena": 200,
+       "alergeny": [
+        6,
+        9,
+        11,
+        14
+       ],
+       "foto": "jidlo-tofu-omacka.jpg"
+      },
+      {
+       "cislo": "29",
+       "nazev": "Restované kuřecí maso se zeleninou a rýží",
+       "cena": 210,
+       "alergeny": [
+        6,
+        9,
+        11,
+        14
+       ],
+       "foto": "jidlo-kure-omacka.jpg"
+      },
+      {
+       "cislo": "30",
+       "nazev": "Restované hovězí maso se zeleninou a rýží",
+       "cena": 240,
+       "alergeny": [
+        6,
+        9,
+        11,
+        14
+       ]
+      },
+      {
+       "cislo": "31",
+       "nazev": "Restované krevety se zeleninou a rýží",
+       "cena": 240,
+       "alergeny": [
+        2,
+        6,
+        9,
+        11,
+        14
+       ]
+      }
+     ]
+    },
+    {
+     "nazev": "Kari s kokosovým mlékem",
+     "polozky": [
+      {
+       "cislo": "32",
+       "nazev": "Tofu kari s kokosovým mlékem, zeleninou a rýží",
+       "cena": 200,
+       "alergeny": [
+        6,
+        9,
+        11
+       ]
+      },
+      {
+       "cislo": "33",
+       "nazev": "Kuřecí kari s kokosovým mlékem, zeleninou a rýží",
+       "cena": 210,
+       "alergeny": [
+        9,
+        11
+       ]
+      },
+      {
+       "cislo": "34",
+       "nazev": "Hovězí kari s kokosovým mlékem, zeleninou a rýží",
+       "cena": 240,
+       "alergeny": [
+        9,
+        11
+       ]
+      },
+      {
+       "cislo": "35",
+       "nazev": "Krevetové kari s kokosovým mlékem, zeleninou a rýží",
+       "cena": 240,
+       "alergeny": [
+        2,
+        9,
+        11
+       ],
+       "foto": "jidlo-kari-krevety.jpg"
+      }
+     ],
+     "pozn": "lehce pikantní"
+    },
+    {
+     "nazev": "Citronová tráva a chili",
+     "polozky": [
+      {
+       "cislo": "36",
+       "nazev": "Restované tofu s citronovou trávou, chili, zeleninou a rýží",
+       "cena": 200,
+       "alergeny": [
+        6,
+        9,
+        11,
+        14
+       ]
+      },
+      {
+       "cislo": "37",
+       "nazev": "Restované kuřecí maso s citronovou trávou, chili, zeleninou a rýží",
+       "cena": 210,
+       "alergeny": [
+        6,
+        9,
+        11,
+        14
+       ]
+      },
+      {
+       "cislo": "38",
+       "nazev": "Restované hovězí maso s citronovou trávou, chili, zeleninou a rýží",
+       "cena": 240,
+       "alergeny": [
+        6,
+        9,
+        11,
+        14
+       ]
+      },
+      {
+       "cislo": "39",
+       "nazev": "Restované krevety s citronovou trávou, chili, zeleninou a rýží",
+       "cena": 240,
+       "alergeny": [
+        2,
+        6,
+        9,
+        11,
+        14
+       ]
+      }
+     ],
+     "pozn": "pikantní"
+    },
+    {
+     "nazev": "Omáčka z černého pepře",
+     "polozky": [
+      {
+       "cislo": "40",
+       "nazev": "Hovězí maso s omáčkou z černého pepře, zeleninou a rýží",
+       "cena": 240,
+       "alergeny": [
+        6,
+        9,
+        11,
+        14
+       ],
+       "foto": "jidlo-hovezi-pepr.jpg"
+      },
+      {
+       "cislo": "41",
+       "nazev": "Masové kuličky z krevet a vepřového masa s omáčkou z černého pepře, zeleninou a rýží",
+       "cena": 220,
+       "alergeny": [
+        2,
+        6,
+        11,
+        14
+       ],
+       "foto": "jidlo-kulicky-pepr.jpg"
+      }
+     ]
+    },
+    {
+     "nazev": "Karamelizovaný bůček",
+     "polozky": [
+      {
+       "cislo": "42",
+       "nazev": "Karamelizovaný bůček, vejce a rýže",
+       "cena": 230,
+       "alergeny": [
+        3,
+        11
+       ]
+      }
+     ]
+    },
+    {
+     "nazev": "Restovaná rýže",
+     "polozky": [
+      {
+       "cislo": "24",
+       "nazev": "Restovaná rýže se zeleninou a tofu",
+       "cena": 180,
+       "alergeny": [
+        3,
+        5,
+        6,
+        14
+       ]
+      },
+      {
+       "cislo": "25",
+       "nazev": "Restovaná rýže se zeleninou a kuřecím masem",
+       "cena": 180,
+       "alergeny": [
+        3,
+        5,
+        6,
+        14
+       ],
+       "foto": "jidlo-ryze-kure.jpg"
+      },
+      {
+       "cislo": "26",
+       "nazev": "Restovaná rýže se zeleninou a hovězím masem",
+       "cena": 210,
+       "alergeny": [
+        3,
+        5,
+        6,
+        14
+       ]
+      },
+      {
+       "cislo": "27",
+       "nazev": "Restovaná rýže se zeleninou a krevetami",
+       "cena": 210,
+       "alergeny": [
+        2,
+        3,
+        5,
+        6,
+        14
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "kachna",
+   "nazev": "Křupavá kachna",
+   "sekce": [
+    {
+     "nazev": "Křupavá kachna",
+     "polozky": [
+      {
+       "cislo": "43",
+       "nazev": "Křupavá kachna s Hoisin omáčkou, zeleninou a rýží",
+       "cena": 330,
+       "alergeny": [
+        1,
+        6,
+        9,
+        11
+       ],
+       "foto": "jidlo-kachna-hoisin.jpg",
+       "tip": true
+      },
+      {
+       "cislo": "44",
+       "nazev": "Křupavá kachna s pikantní česnekovou omáčkou, zeleninou a rýží",
+       "cena": 330,
+       "alergeny": [
+        1,
+        9,
+        11
+       ]
+      },
+      {
+       "cislo": "45",
+       "nazev": "Křupavá kachna s omáčkou z černého pepře, zeleninou a rýží",
+       "cena": 330,
+       "alergeny": [
+        1,
+        9,
+        11,
+        14
+       ]
+      },
+      {
+       "cislo": "46",
+       "nazev": "Křupavá kachna s kari omáčkou, zeleninou a rýží",
+       "cena": 330,
+       "alergeny": [
+        1,
+        9,
+        11
+       ]
+      },
+      {
+       "cislo": "47",
+       "nazev": "Křupavá kachna s citronovou trávou, chili, zeleninou a rýží",
+       "cena": 330,
+       "alergeny": [
+        1,
+        9,
+        11,
+        14
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "prilohy",
+   "nazev": "Přílohy & omáčky",
+   "sekce": [
+    {
+     "nazev": "Přílohy",
+     "polozky": [
+      {
+       "cislo": "50",
+       "nazev": "Rýže dušená",
+       "cena": 45,
+       "alergeny": []
+      },
+      {
+       "cislo": "51",
+       "nazev": "Kulaté rýžové nudle",
+       "cena": 45,
+       "alergeny": []
+      },
+      {
+       "cislo": "52",
+       "nazev": "Restované nudle",
+       "cena": 70,
+       "alergeny": [
+        1
+       ]
+      },
+      {
+       "cislo": "53",
+       "nazev": "Restované udon nudle",
+       "cena": 80,
+       "alergeny": [
+        1
+       ]
+      },
+      {
+       "cislo": "54",
+       "nazev": "Hranolky",
+       "cena": 60,
+       "alergeny": []
+      }
+     ]
+    },
+    {
+     "nazev": "Omáčky",
+     "polozky": [
+      {
+       "cislo": "60",
+       "nazev": "Sladkokyselá omáčka",
+       "cena": 30,
+       "alergeny": [
+        6,
+        9
+       ]
+      },
+      {
+       "cislo": "61",
+       "nazev": "Rybí omáčka",
+       "cena": 30,
+       "alergeny": [
+        2,
+        4
+       ]
+      },
+      {
+       "cislo": "62",
+       "nazev": "Hoisin omáčka",
+       "cena": 40,
+       "alergeny": [
+        1,
+        6,
+        11
+       ]
+      },
+      {
+       "cislo": "63",
+       "nazev": "Arašídová omáčka",
+       "cena": 40,
+       "alergeny": [
+        5,
+        7
+       ]
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "alergeny": [
+  "Lepek",
+  "Korýši",
+  "Vejce",
+  "Ryby",
+  "Arašídy",
+  "Sója",
+  "Mléko",
+  "Skořápkové plody",
+  "Celer",
+  "Hořčice",
+  "Sezam",
+  "Oxid siřičitý a siřičitany",
+  "Vlčí bob (lupina)",
+  "Měkkýši"
+ ],
+ "napoje": [
+  {
+   "nazev": "Vietnamská káva",
+   "popis": "Silná káva z kovového filtru phin. Kdo má rád klasiku, dostane espresso illy.",
+   "foto": "kava.jpg"
+  },
+  {
+   "nazev": "Vína Znovín",
+   "popis": "Bílá, růžová i červená od znojemského vinařství."
+  },
+  {
+   "nazev": "Čaje",
+   "popis": "Ronnefeldt i vietnamský čaj."
+  },
+  {
+   "nazev": "Pivo a nealko",
+   "popis": "Kozel, Birell, Römerquelle, Natura, Cappy, Fuzetea, kokosový Sagiko a limonády."
+  }
+ ]
+}
