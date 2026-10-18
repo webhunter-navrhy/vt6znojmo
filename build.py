@@ -22,6 +22,15 @@ h = lambda p: hashlib.md5((OUT / p).read_bytes()).hexdigest()[:8]
 data = {p.stem: json.loads(p.read_text()) for p in CONTENT.glob('*.json')}
 
 
+def _webp(p):
+    """assets/img/x.jpg → assets/img/x.webp, pokud WebP varianta existuje (menší přenos, stejná fotka)"""
+    if p.startswith('assets/img/') and p.endswith('.jpg'):
+        w = p[:-4] + '.webp'
+        if (OUT / w).exists():
+            return w
+    return p
+
+
 def img(p, w=None):
     """cesta k obrázku z dat → cesta od kořene webu; w=900 → menší varianta, pokud existuje"""
     p = str(p)
@@ -31,21 +40,43 @@ def img(p, w=None):
     if w:
         small = p.replace('.jpg', f'-{w}.jpg')
         if (OUT / small).exists():
-            return small
-    return p
+            return _webp(small)
+    return _webp(p)
 
 
 def srcset(p):
-    p = img(p)
-    small = p.replace('.jpg', '-900.jpg')
-    if (OUT / small).exists():
-        return f'{small} 900w, {p} 1800w'
-    return p
+    """všechny dostupné šířky fotky (480 / 900 / originál) pro srcset"""
+    p = str(p)
+    if p.startswith('img/'):
+        return p
+    base = 'assets/img/' + p.rsplit('/', 1)[-1]
+    out = []
+    for suf in ('-480', '-900', ''):
+        c = _webp(base.replace('.jpg', f'{suf}.jpg'))
+        if (OUT / c).exists():
+            try:
+                from PIL import Image
+                wpx = Image.open(OUT / c).width
+            except Exception:
+                wpx = {'-480': 480, '-900': 900}.get(suf, 1800)
+            out.append(f'{c} {wpx}w')
+    return ', '.join(out) or img(p)
+
+
+def wh(p):
+    """width/height atributy podle skutečné fotky (proti poskakování stránky)"""
+    try:
+        from PIL import Image
+        im = Image.open(OUT / img(p))
+        return f'width="{im.width}" height="{im.height}"'
+    except Exception:
+        return ''
 
 
 env = Environment(loader=FileSystemLoader(str(SRC)), autoescape=False)
 env.filters['img'] = img
 env.filters['srcset'] = srcset
+env.filters['wh'] = wh
 env.filters['tel'] = lambda t: re.sub(r'[^\d+]', '', t)
 env.filters['kc'] = lambda n: f'{n:,}'.replace(',', ' ')
 

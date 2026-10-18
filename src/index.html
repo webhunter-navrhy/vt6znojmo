@@ -9,7 +9,7 @@
 <meta name="theme-color" content="#15100D">
 <meta property="og:title" content="{{ site.nazev }} · Znojmo">
 <meta property="og:description" content="{{ site.meta_popis }}">
-<meta property="og:image" content="{{ 'hero-zamecnicka.jpg'|img }}">
+<meta property="og:image" content="https://webhunter-navrhy.github.io/vt6znojmo/assets/img/hero-zamecnicka.jpg">
 <link rel="icon" href="assets/favicon.png?v={{ v.fav }}">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -46,8 +46,8 @@
 <!-- HERO -->
 <section class="hero" aria-label="Úvod">
   <picture class="hero__bg">
-    <source media="(max-width: 767px)" srcset="{{ 'hero-zamecnicka-m.jpg'|img(900) }}">
-    <img src="{{ 'hero-zamecnicka.jpg'|img }}" alt="Fasáda restaurace Việt Tâm v Zámečnické ulici ve Znojmě" fetchpriority="high">
+    <source media="(max-width: 767px)" srcset="{{ 'hero-zamecnicka-m.jpg'|srcset }}" sizes="100vw">
+    <img src="{{ 'hero-zamecnicka.jpg'|img }}" srcset="{{ 'hero-zamecnicka.jpg'|srcset }}" sizes="100vw" {{ 'hero-zamecnicka.jpg'|wh }} decoding="async" alt="Fasáda restaurace Việt Tâm v Zámečnické ulici ve Znojmě" fetchpriority="high">
   </picture>
   <div class="hero__in">
     <p class="eyebrow eyebrow--light hero__fade">{{ site.hero.label }}</p>
@@ -79,8 +79,8 @@
 <section class="story" id="restaurace">
   <div class="wrap story__grid">
     <div class="story__media">
-      <figure class="story__big clip"><img src="{{ 'restaurace-2.jpg'|img }}" srcset="{{ 'restaurace-2.jpg'|srcset }}" sizes="(max-width: 767px) 92vw, 46vw" alt="Interiér restaurace VT6 s klenutými oblouky" loading="lazy"></figure>
-      <figure class="story__small clip"><img src="{{ 'terasa.jpg'|img }}" alt="Terasa s dřevěnými stoly a výhledem na střechy Znojma" loading="lazy"></figure>
+      <figure class="story__big clip"><img src="{{ 'restaurace-2.jpg'|img }}" srcset="{{ 'restaurace-2.jpg'|srcset }}" sizes="(max-width: 767px) 92vw, 46vw" {{ 'restaurace-2.jpg'|wh }} alt="Interiér restaurace VT6 s klenutými oblouky" loading="lazy" decoding="async"></figure>
+      <figure class="story__small clip"><img src="{{ 'terasa.jpg'|img }}" srcset="{{ 'terasa.jpg'|srcset }}" sizes="(max-width: 767px) 44vw, 23vw" {{ 'terasa.jpg'|wh }} alt="Terasa s dřevěnými stoly a výhledem na střechy Znojma" loading="lazy" decoding="async"></figure>
     </div>
     <div class="story__text">
       <p class="eyebrow reveal">{{ site.pribeh.label }}</p>
@@ -114,7 +114,7 @@
     <div class="menu__grid">
       <div class="plate" aria-hidden="true">
         <div class="plate__frame">
-          {% for g in menu.skupiny %}{% for s in g.sekce %}{% for i in s.polozky if i.foto %}<img src="{{ i.foto|img(900) }}" alt="" data-plate="{{ i.cislo }}" loading="lazy"{% if i.cislo == '14' %} class="is-on"{% endif %}>{% endfor %}{% endfor %}{% endfor %}
+          {% for g in menu.skupiny %}{% for s in g.sekce %}{% for i in s.polozky if i.foto %}<img {{ '' if i.cislo == '14' else 'data-' }}src="{{ i.foto|img(900) }}" {{ i.foto|wh }} alt="{{ (i.viet ~ ' – ') if i.viet }}{{ i.nazev }}" data-plate="{{ i.cislo }}" loading="lazy" decoding="async"{% if i.cislo == '14' %} class="is-on"{% endif %}>{% endfor %}{% endfor %}{% endfor %}
           <p class="plate__cap" data-plate-cap>Phở Việt Tâm</p>
         </div>
         <p class="plate__hint">Vlastní fotky z naší kuchyně</p>
@@ -137,7 +137,7 @@
                 </span>
                 <span class="dish__line" aria-hidden="true"></span>
                 <span class="dish__price">{{ i.cena }} Kč</span>
-                {% if i.foto %}<img class="dish__thumb" src="{{ i.foto|img(900) }}" alt="" loading="lazy">{% endif %}
+                {% if i.foto %}<img class="dish__thumb" src="{{ i.foto|img(900) }}" srcset="{{ i.foto|srcset }}" sizes="5rem" {{ i.foto|wh }} alt="{{ i.nazev }}" loading="lazy" decoding="async">{% endif %}
               </li>
               {% endfor %}
             </ul>
@@ -158,7 +158,7 @@
       <div class="drinks__grid reveal-group">
         {% for d in menu.napoje %}
         <div class="drink reveal-item{% if d.foto %} drink--foto{% endif %}">
-          {% if d.foto %}<img src="{{ d.foto|img(900) }}" alt="{{ d.nazev }}" loading="lazy">{% endif %}
+          {% if d.foto %}<img src="{{ d.foto|img(900) }}" srcset="{{ d.foto|srcset }}" sizes="(max-width: 767px) 92vw, 25vw" {{ d.foto|wh }} alt="{{ d.nazev }}" loading="lazy" decoding="async">{% endif %}
           <div><h4>{{ d.nazev }}</h4><p>{{ d.popis }}</p></div>
         </div>
         {% endfor %}
@@ -198,7 +198,7 @@
 
 <!-- OBRAZ + ČÍSLA -->
 <section class="break" aria-label="VT6 v číslech">
-  <div class="break__img"><img src="{{ 'restaurace-lampy.jpg'|img }}" srcset="{{ 'restaurace-lampy.jpg'|srcset }}" sizes="100vw" alt="Restaurace VT6 se závěsnými lampami a zelenými rostlinami" loading="lazy"></div>
+  <div class="break__img"><img src="{{ 'restaurace-lampy.jpg'|img }}" srcset="{{ 'restaurace-lampy.jpg'|srcset }}" sizes="100vw" {{ 'restaurace-lampy.jpg'|wh }} alt="Restaurace VT6 se závěsnými lampami a zelenými rostlinami" loading="lazy" decoding="async"></div>
   <div class="wrap break__stats reveal-group">
     {% for c in site.cisla %}
     <div class="stat reveal-item"><span class="stat__n"><span data-count="{{ c.n }}">{{ c.n }}</span>{{ c.s }}</span><span class="stat__t">{{ c.t }}</span></div>
@@ -224,8 +224,8 @@
     <div class="place{% if loop.first %} is-on{% endif %}" id="s-{{ a.id }}" role="tabpanel"{% if not loop.first %} hidden{% endif %}>
       <div class="place__grid">
         <div class="place__media">
-          <figure class="place__main"><img src="{{ a.foto|img }}" srcset="{{ a.foto|srcset }}" sizes="(max-width: 767px) 92vw, 55vw" alt="{{ a.nazev }}, {{ a.ulice }}" loading="lazy"></figure>
-          <figure class="place__sub"><img src="{{ a.foto2|img(900) }}" alt="" loading="lazy"></figure>
+          <figure class="place__main"><img src="{{ a.foto|img }}" srcset="{{ a.foto|srcset }}" sizes="(max-width: 767px) 92vw, 55vw" {{ a.foto|wh }} alt="{{ a.nazev }}, {{ a.ulice }}" loading="lazy" decoding="async"></figure>
+          <figure class="place__sub"><img src="{{ a.foto2|img(900) }}" srcset="{{ a.foto2|srcset }}" sizes="(max-width: 767px) 46vw, 24vw" {{ a.foto2|wh }} alt="{{ a.foto2_alt }}" loading="lazy" decoding="async"></figure>
           {% if a.id == 'hakenova' %}<img class="place__crest" src="assets/znak-znojmo.png" alt="Penzion Znojmo" width="110" height="155" loading="lazy">{% endif %}
         </div>
         <div class="place__text">
@@ -240,7 +240,7 @@
       <div class="rooms">
         {% for r in a.pokoje %}
         <a class="room" href="{{ ubytovani.trevlix }}{{ a.cid }}" target="_blank" rel="noopener">
-          <span class="room__img"><img src="{{ r.foto|img(900) }}" alt="{{ r.nazev }} – {{ a.ulice }}" loading="lazy"></span>
+          <span class="room__img"><img src="{{ r.foto|img(900) }}" srcset="{{ r.foto|srcset }}" sizes="(max-width: 767px) 92vw, 30vw" {{ r.foto|wh }} alt="{{ r.nazev }} – {{ a.ulice }}" loading="lazy" decoding="async"></span>
           <span class="room__meta"><span>{{ r.m2 }} m²</span><span>{{ r.osob }} osoby</span></span>
           <span class="room__name">{{ r.nazev }}</span>
           <span class="room__note">{{ r.pozn }}</span>

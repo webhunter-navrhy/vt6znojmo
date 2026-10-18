@@ -61,6 +61,7 @@
   /* lístek: záložky */
   const tabs = $$('.tab');
   tabs.forEach(t => t.addEventListener('click', () => {
+    loadPlates();
     tabs.forEach(x => { const on = x === t; x.classList.toggle('is-on', on); x.setAttribute('aria-selected', on); });
     $$('.panel').forEach(p => { const on = p.id === 'p-' + t.dataset.tab; p.hidden = !on; p.classList.toggle('is-on', on); });
     const first = $(`#p-${t.dataset.tab} .dish.has-foto`); if (first) show(first);
@@ -69,6 +70,9 @@
   /* lístek: talíř ukazuje jídlo, na které míříte */
   const plates = $$('[data-plate]'), cap = $('[data-plate-cap]');
   let active;
+  /* fotky talíře se stáhnou až ve chvíli, kdy návštěvník míří do lístku (šetří data) */
+  function loadPlates() { plates.forEach(img => { if (img.dataset.src) { img.src = img.dataset.src; delete img.dataset.src; } }); }
+  const grid = $('.menu__grid'); if (grid) ['pointerenter', 'focusin', 'touchstart'].forEach(ev => grid.addEventListener(ev, loadPlates, { once: true, passive: true }));
   function show(li) {
     const no = li.dataset.dish;
     plates.forEach(img => img.classList.toggle('is-on', img.dataset.plate === no));
@@ -77,8 +81,8 @@
     active = li; li.classList.add('is-active');
   }
   $$('.dish.has-foto').forEach(li => {
-    li.addEventListener('mouseenter', () => show(li));
-    li.addEventListener('focus', () => show(li));
+    li.addEventListener('mouseenter', () => { loadPlates(); show(li); });
+    li.addEventListener('focus', () => { loadPlates(); show(li); });
   });
   const tip = $('.dish[data-dish="14"]'); if (tip) show(tip);
 
